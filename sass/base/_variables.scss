@@ -1,0 +1,17 @@
+:root {
+    // Breakpoints
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    // Font
+    --font-primary: 'Lato', sans-serif;
+    // Colours
+    --color-primary: hsl(180, 66%, 49%);
+    --color-primary-dark: hsl(257, 27%, 26%);
+    --color-secondary: hsl(0, 87%, 67%);
+    --color-gray:hsl(0, 0%, 75%);
+    --color-gray-dark: #343a40;
+    --color-light:#f8f9fa;
+    --color-dark:#212529;
+}
