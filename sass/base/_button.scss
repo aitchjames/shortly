@@ -1,0 +1,23 @@
+.button {
+    border: none;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    font-weight: 500;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #99e3e2;
+    }
+
+    &--curved {
+        border-radius: 3rem;
+    }
+
+    &--rounded {
+        border-radius: 0.5rem;
+    }
+}

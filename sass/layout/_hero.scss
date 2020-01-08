@@ -1,0 +1,41 @@
+.hero {
+    grid-column: center-start / center-end;
+    
+    width: 100%;
+    display: flex;
+
+    &--information {
+        grid-column: center-start / col-end 4;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &--image {
+        grid-column: col-start 5 / center-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-size: 7rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        color: var(--color-gray-violet);
+        font-weight: 500;
+        margin-bottom: 3rem;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-left: 15rem;
+    }
+}

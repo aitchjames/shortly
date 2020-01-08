@@ -1,0 +1,35 @@
+.navbar {
+    grid-column: center-start / center-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &-logo {
+        margin-right: 4rem;
+    }
+
+    &-link {
+        list-style: none;
+        display: flex;
+
+        &__item {
+            margin-right: 1.8rem;
+            white-space: nowrap;
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--color-gray-violet);
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--color-v-dark-blue);
+            }
+        }
+    }
+}

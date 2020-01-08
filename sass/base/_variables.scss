@@ -5,13 +5,21 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     // Font
-    --font-primary: 'Lato', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
     // Colours
     --color-primary: hsl(180, 66%, 49%);
     --color-primary-dark: hsl(257, 27%, 26%);
     --color-secondary: hsl(0, 87%, 67%);
     --color-gray:hsl(0, 0%, 75%);
     --color-gray-dark: #343a40;
+    --color-gray-violet: hsl(257, 7%, 63%);
+    --color-v-dark-blue: hsl(255, 11%, 22%);
+    --color-v-dark-violet:  hsl(260, 8%, 14%);
     --color-light:#f8f9fa;
     --color-dark:#212529;
 }
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
