@@ -7,7 +7,8 @@
   --color-primary: hsl(180, 66%, 49%);
   --color-primary-dark: hsl(257, 27%, 26%);
   --color-secondary: hsl(0, 87%, 67%);
-  --color-gray:hsl(0, 0%, 75%);
+  --color-gray-light: hsl(230, 25%, 95%);
+  --color-gray: hsl(0, 0%, 75%);
   --color-gray-dark: #343a40;
   --color-gray-violet: hsl(257, 7%, 63%);
   --color-v-dark-blue: hsl(255, 11%, 22%);
@@ -47,9 +48,13 @@ body {
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
 
 .container {
-  max-width: 144rem;
-  margin: 0 auto;
-  width: 100%; }
+  display: grid;
+  grid-template-rows: 100vh min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 992px) {
+    .container {
+      grid-template-rows: 100vh min-content;
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
 
 .button {
   border: none;
@@ -72,7 +77,8 @@ body {
   grid-column: full-start / full-end; }
 
 .features {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  background-color: var(--color-gray-light); }
 
 .footer {
   grid-column: full-start / full-end; }
@@ -134,4 +140,23 @@ body {
         color: var(--color-v-dark-blue); }
 
 .shorten {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 2rem;
+  padding: 4.5rem 4rem;
+  background: var(--color-primary-dark) url("/images/bg-shorten-desktop.svg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem; }
+  .shorten-form {
+    display: flex; }
+    .shorten-form__input {
+      padding: 1.5rem 2rem;
+      border-radius: 0.5rem;
+      border: none;
+      flex: 1;
+      font-size: 1.8rem;
+      color: var(--color-gray-violet); }
+    .shorten-form__button {
+      margin-left: 2rem;
+      font-size: 2rem;
+      font-weight: 500; }

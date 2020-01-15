@@ -1,3 +1,28 @@
 .shorten {
     grid-column: center-start / center-end;
+    margin: 2rem;
+    padding: 4.5rem 4rem;
+    background: var(--color-primary-dark) url("/images/bg-shorten-desktop.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+
+    &-form {
+        display: flex;
+
+        &__input {
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            flex: 1;
+            font-size: 1.8rem;
+            color: var(--color-gray-violet);
+        }
+
+        &__button {
+            margin-left: 2rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
 }
