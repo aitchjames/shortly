@@ -12,41 +12,30 @@
 
     <title>Shortly - URL Shortening</title>
 </head>
-<body>
-    <div class="container">
-        <header class="fold-top">
-
-        </header>
-        <main class="fold-bottom">
-
-        </main>
-    </div>
-    <!-- LEGACY CODE LUL -->
-    <div class="grid-container">
-        <header class="navbar">
-            <nav class="navigation">
+<body class="page-container">
+    <header class="fold-top content-grid">
+        <nav class="navbar">
+            <div class="navigation">
                 <img class="navigation-logo" src="images/logo.svg" alt="Shortly Logo">
                 <ul class="navigation-link">
                     <li><a href="#" class="navigation-link__item">Features</a></li>
                     <li><a href="#" class="navigation-link__item">Pricing</a></li>
                     <li><a href="#" class="navigation-link__item">Resources</a>   </li>     
                 </ul>
-            </nav>
+            </div>
             <ul class="navigation-link">
                 <li><a href="#" class="navigation-link__item">Login</a></li>
                 <li><a href="#" class="button button--curved">Sign Up</a></li>          
-            </ul>        
-        </header>
-        <section class="hero--information">
+            </ul> 
+        </nav>
+        <div class="hero--information">
             <h1 class="hero__title">More than just shorter links</h1>
             <h3 class="hero__subtitle">Build your brand’s recognition and get detailed insights 
             on how your links are performing.</h3>
             <a href="#" class="button button--curved">Get Started</a>  
-        </section>
-        <section class="hero--image">
-            <img class="hero__image" src="images/illustration-working.svg" alt="Person working illustration">
-        </section>
-        
+        </div>
+    </header>
+    <section class="fold-bottom grid-container">
         <section class="shorten">
             <form action="#!" class="shorten-form">
                 <input class="shorten-form__input" type="text" placeholder="Shorten a link here...">
@@ -54,30 +43,28 @@
             </form>
         </section>
         <section class="features">
-            Advanced Statistics
-
-            Track how your links are performing across the web with our 
-            advanced statistics dashboard.
-
-            Brand Recognition
-
-            Boost your brand recognition with each click. Generic links don’t 
-            mean a thing. Branded links help instil confidence in your content.
-
-            Detailed Records
-
-            Gain insights into who is clicking your links. Knowing when and where 
-            people engage with your content helps inform better decisions.
-
-            Fully Customizable
-
-            Improve brand awareness and content discoverability through customizable 
-            links, supercharging audience engagement.
+            <div class="features-heading">
+                <h2>Advanced Statistics</h2>
+                <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>                
+            </div>
+            <div class="features-cards">
+                <div class="features-card">
+                    <h3>Brand Recognition</h3>
+                    <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p> 
+                </div>
+                <div class="features-card">
+                    <h3>Detailed Records</h3>
+                    <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p> 
+                </div>
+                <div class="features-card">
+                    <h3>Fully Customizable</h3>
+                    <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p> 
+                </div>  
+            </div> 
         </section>
         <section class="cta">
-            Boost your links today
-
-            Get Started
+            <h3>Boost your links today</h3>
+            <a href="#" class="button button--curved">Get Started</a>              
         </section>
         <footer class="footer">
             Features
@@ -99,6 +86,6 @@
             Careers
             Contact
         </footer>
-    </div>
+    </section>
 </body>
 </html>
