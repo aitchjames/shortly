@@ -1,3 +1,29 @@
 .footer {
     grid-column: full-start / full-end;
+    padding: 5rem;
+    background-color: var(--color-v-dark-violet);
+    color: var(--color-light);
+
+    &-section {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 2rem;
+        max-width: 120rem;
+        margin: 0 auto;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            &-social {
+                display: flex;
+                align-content: center;
+            }
+        }
+    }
+}
+
+.social-link {
+    margin-right: 1rem;
 }

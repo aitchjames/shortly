@@ -1,32 +1,70 @@
 .navbar {
     grid-column: center-start / center-end;
-    display: flex;
+    display: flex;    
     justify-content: space-between;
     align-items: center;
     padding: 4rem 0;
     height: 10rem;
+
+    @media only screen and (max-width: $breakpoint-md) {
+        flex-wrap: wrap;
+    }
 }
 
 .navigation {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
+    
+
+    @media only screen and (max-width: $breakpoint-md) {
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: stretch; 
+        order: 3;
+        background-color: var(--color-primary-dark);
+        border-radius: 1rem;
+    }
 
     &-logo {
         margin-right: 4rem;
+
+        @media only screen and (max-width: $breakpoint-md) {
+            max-height: 3rem;
+        }        
     }
 
     &-link {
         list-style: none;
         display: flex;
 
-        &__item {
+        & li {
+            @media only screen and (max-width: $breakpoint-md) {                 
+                padding: 1.5rem;
+                margin: 0.5rem 0;
+                //align-self: center;
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-md) {
+            flex-direction: column; 
+            align-items: center;  
+        }
+        
+        &__item  {
             margin-right: 1.8rem;
             white-space: nowrap;
             text-decoration: none;
             font-weight: 500;
             color: var(--color-gray-violet);
             transition: color 0.3s ease;
+
+            @media only screen and (max-width: $breakpoint-md) {
+                margin: 0;                
+                width: 100%;
+                
+            }   
 
             &:hover {
                 color: var(--color-v-dark-blue);

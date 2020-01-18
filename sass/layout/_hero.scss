@@ -1,6 +1,5 @@
 .hero {
-    grid-column: center-start / center-end;
-    
+    grid-column: center-start / center-end;    
     width: 100%;
     display: flex;
 
@@ -11,31 +10,28 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-    }
 
-    &--image {
-        grid-column: col-start 5 / center-end;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        @media only screen and (max-width: $breakpoint-md) {
+            grid-column: center-start / center-end;            
+            text-align: center;
+            justify-content: end;
+            align-items: center;
+        }
     }
 
     &__title {
         font-size: 7rem;
         line-height: 1.1;
         margin-bottom: 1rem;
+
+        @media only screen and (max-width: $breakpoint-md) {
+            font-size: 5rem;
+        }
     }
 
     &__subtitle {
         color: var(--color-gray-violet);
         font-weight: 500;
         margin-bottom: 3rem;
-    }
-
-    &__image {
-        width: 100%;
-        height: auto;
-        margin-left: 15rem;
     }
 }
