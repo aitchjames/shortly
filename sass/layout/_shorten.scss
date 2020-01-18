@@ -7,8 +7,16 @@
     background-size: cover;
     border-radius: 1rem;
 
+    @media only screen and (max-width: $breakpoint-md) {
+        padding: 3.5rem 3rem;
+    }
+
     &-form {
         display: flex;
+
+        @media only screen and (max-width: $breakpoint-md) {
+            flex-direction: column;
+        }
 
         &__input {
             padding: 1.5rem 2rem;
@@ -23,6 +31,10 @@
             margin-left: 2rem;
             font-size: 2rem;
             font-weight: 500;
+
+            @media only screen and (max-width: $breakpoint-md) {
+                margin: 2rem 0 0 0;
+            }
         }
     }
 }

@@ -15,8 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    
+    width: 100%;    
 
     @media only screen and (max-width: $breakpoint-md) {
         margin-top: 5rem;
@@ -25,6 +24,9 @@
         order: 3;
         background-color: var(--color-primary-dark);
         border-radius: 1rem;
+        padding: 3rem 0;
+        z-index: 20;
+        display: none;
     }
 
     &-logo {
@@ -43,27 +45,29 @@
             @media only screen and (max-width: $breakpoint-md) {                 
                 padding: 1.5rem;
                 margin: 0.5rem 0;
-                //align-self: center;
+                align-self: stretch;
             }
         }
 
         @media only screen and (max-width: $breakpoint-md) {
             flex-direction: column; 
-            align-items: center;  
+            align-items: stretch;  
+            text-align: center;
         }
         
-        &__item  {
+        &__item a {
             margin-right: 1.8rem;
             white-space: nowrap;
             text-decoration: none;
             font-weight: 500;
             color: var(--color-gray-violet);
-            transition: color 0.3s ease;
+            transition: color 0.3s ease;           
 
             @media only screen and (max-width: $breakpoint-md) {
-                margin: 0;                
-                width: 100%;
-                
+                margin: 0 auto;                
+                width: 80%;        
+                display: block;                 
+                color: var(--color-light);  
             }   
 
             &:hover {

@@ -1,5 +1,6 @@
 .fold-top {
     grid-column: full-start / full-end;
+    grid-template-rows: 10rem 1fr;
     background-image: url('../images/illustration-working.svg');
     background-repeat: no-repeat;
     background-size: 50%;

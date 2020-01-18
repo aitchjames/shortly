@@ -5,7 +5,6 @@
 
     &--information {
         grid-column: center-start / col-end 4;
-        height: 60rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -14,8 +13,8 @@
         @media only screen and (max-width: $breakpoint-md) {
             grid-column: center-start / center-end;            
             text-align: center;
-            justify-content: end;
             align-items: center;
+            margin-top: 20rem;
         }
     }
 
