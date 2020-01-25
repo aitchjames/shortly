@@ -16,14 +16,28 @@
             display: flex;
             flex-direction: column;
 
+            & h5 {
+                margin-bottom: 2rem;
+            }
+
+            & a {
+                color: var(--color-light);
+                text-decoration: none;
+                margin-bottom: 0.8rem;
+
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+
             &-social {
                 display: flex;
-                align-content: center;
+                align-content: center;                
             }
         }
     }
 }
 
 .social-link {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }

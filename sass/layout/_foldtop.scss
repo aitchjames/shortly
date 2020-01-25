@@ -7,7 +7,12 @@
     background-position: right -135px bottom 50%;
 
     @media only screen and (max-width: $breakpoint-md) {
+        background-size: 80%;
+        background-position: top 100px center;
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) {
         background-size: 100%;
-        background-position: top 150px center;
+        background-position: top 100px center;
     }
 }

@@ -8,6 +8,15 @@
         max-width: 50rem;
         align-self: center;
         text-align: center;
+        
+        & h2 {
+            font-size: 3.4rem;
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            color: var(--color-gray-violet);
+        }
     }
 
     &-cards {
@@ -28,11 +37,15 @@
             z-index: 1;
 
             @media only screen and (max-width: $breakpoint-md) {
-                top: 10%;
+                top: 50%;
                 left: 50%;
                 height: 80%;
                 width: 0.8rem;
             }
+        }
+
+        @media only screen and (max-width: $breakpoint-md) {
+            flex-direction: column;
         }
     }
 
@@ -43,7 +56,11 @@
         padding-top: 6rem;
         border-radius: 0.5rem; 
         position: relative;   
-        z-index: 3;            
+        z-index: 3;        
+        
+        @media only screen and (max-width: $breakpoint-md) {
+            text-align: center;
+        }
 
         & h3 {
             margin-bottom: 1.5rem;
@@ -66,7 +83,11 @@
             border-radius: 5rem;
             width: max-content;
             padding: 2rem;
-            background-color: var(--color-primary-dark)
+            background-color: var(--color-primary-dark);
+
+            @media only screen and (max-width: $breakpoint-md) {            
+                left: 42%;
+            }
         }
 
         &:nth-child(2) {

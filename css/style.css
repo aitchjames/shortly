@@ -106,6 +106,11 @@ body {
     max-width: 50rem;
     align-self: center;
     text-align: center; }
+    .features-heading h2 {
+      font-size: 3.4rem;
+      margin-bottom: 1rem; }
+    .features-heading p {
+      color: var(--color-gray-violet); }
   .features-cards {
     display: flex;
     align-items: flex-start;
@@ -123,10 +128,13 @@ body {
       z-index: 1; }
       @media only screen and (max-width: 768px) {
         .features-cards::after {
-          top: 10%;
+          top: 50%;
           left: 50%;
           height: 80%;
           width: 0.8rem; } }
+    @media only screen and (max-width: 768px) {
+      .features-cards {
+        flex-direction: column; } }
   .features-card {
     margin: 2rem;
     background-color: var(--color-light);
@@ -135,6 +143,9 @@ body {
     border-radius: 0.5rem;
     position: relative;
     z-index: 3; }
+    @media only screen and (max-width: 768px) {
+      .features-card {
+        text-align: center; } }
     .features-card h3 {
       margin-bottom: 1.5rem; }
     .features-card p {
@@ -153,6 +164,9 @@ body {
       width: max-content;
       padding: 2rem;
       background-color: var(--color-primary-dark); }
+      @media only screen and (max-width: 768px) {
+        .features-card__icon {
+          left: 42%; } }
     .features-card:nth-child(2) {
       margin-top: 5rem; }
     .features-card:nth-child(3) {
@@ -171,8 +185,12 @@ body {
   background-position: right -135px bottom 50%; }
   @media only screen and (max-width: 768px) {
     .fold-top {
+      background-size: 80%;
+      background-position: top 100px center; } }
+  @media only screen and (max-width: 576px) {
+    .fold-top {
       background-size: 100%;
-      background-position: top 150px center; } }
+      background-position: top 100px center; } }
 
 .footer {
   grid-column: full-start / full-end;
@@ -189,12 +207,20 @@ body {
     .footer-section__item {
       display: flex;
       flex-direction: column; }
+      .footer-section__item h5 {
+        margin-bottom: 2rem; }
+      .footer-section__item a {
+        color: var(--color-light);
+        text-decoration: none;
+        margin-bottom: 0.8rem; }
+        .footer-section__item a:hover {
+          color: var(--color-primary); }
       .footer-section__item-social {
         display: flex;
         align-content: center; }
 
 .social-link {
-  margin-right: 1rem; }
+  margin-right: 1.5rem; }
 
 .hero {
   grid-column: center-start / center-end;
@@ -207,6 +233,12 @@ body {
     justify-content: center;
     align-items: flex-start; }
     @media only screen and (max-width: 768px) {
+      .hero--information {
+        grid-column: center-start / center-end;
+        text-align: center;
+        align-items: center;
+        margin-top: 35rem; } }
+    @media only screen and (max-width: 576px) {
       .hero--information {
         grid-column: center-start / center-end;
         text-align: center;
@@ -276,6 +308,8 @@ body {
       font-weight: 500;
       color: var(--color-gray-violet);
       transition: color 0.3s ease; }
+      .navigation-link__item a.button.button--curved {
+        color: var(--color-light); }
       @media only screen and (max-width: 768px) {
         .navigation-link__item a {
           margin: 0 auto;
@@ -288,6 +322,7 @@ body {
 .shorten {
   grid-column: center-start / center-end;
   margin-top: -7rem;
+  margin-bottom: 1rem;
   padding: 4.5rem 4rem;
   background: var(--color-primary-dark) url("/images/bg-shorten-desktop.svg") no-repeat;
   background-position: center;
@@ -315,3 +350,18 @@ body {
       @media only screen and (max-width: 768px) {
         .shorten-form__button {
           margin: 2rem 0 0 0; } }
+  .shorten-link {
+    grid-column: center-start / center-end; }
+    .shorten-link__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem;
+      background-color: var(--color-light);
+      margin-top: 1.5rem;
+      border-radius: 1rem; }
+    .shorten-link__copy-item a {
+      color: var(--color-primary); }
+    .shorten-link__copy-button {
+      margin-left: 1.5rem;
+      font-size: 1.8rem; }

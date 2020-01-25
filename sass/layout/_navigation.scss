@@ -61,7 +61,11 @@
             text-decoration: none;
             font-weight: 500;
             color: var(--color-gray-violet);
-            transition: color 0.3s ease;           
+            transition: color 0.3s ease;  
+            
+            &.button.button--curved {
+                color: var(--color-light);
+            }
 
             @media only screen and (max-width: $breakpoint-md) {
                 margin: 0 auto;                

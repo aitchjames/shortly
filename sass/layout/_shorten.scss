@@ -1,6 +1,7 @@
 .shorten {
     grid-column: center-start / center-end;
     margin-top: -7rem;
+    margin-bottom: 1rem;
     padding: 4.5rem 4rem;
     background: var(--color-primary-dark) url("/images/bg-shorten-desktop.svg") no-repeat;
     background-position: center;
@@ -35,6 +36,29 @@
             @media only screen and (max-width: $breakpoint-md) {
                 margin: 2rem 0 0 0;
             }
+        }
+    }
+
+    &-link {
+        grid-column: center-start / center-end;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem;
+            background-color: var(--color-light);
+            margin-top: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        &__copy-item a {
+            color: var(--color-primary);
+        }
+
+        &__copy-button {
+            margin-left: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 }
