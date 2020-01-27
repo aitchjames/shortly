@@ -26,7 +26,14 @@
         border-radius: 1rem;
         padding: 3rem 0;
         z-index: 20;
-        display: none;
+        transition: all 0.2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__is-visible {
+        opacity: 1;
+        visibility: visible;
     }
 
     &-logo {

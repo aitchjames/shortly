@@ -83,7 +83,11 @@ body {
 .button-mobile {
   border: none;
   background-color: transparent;
-  font-size: 4rem; }
+  font-size: 4rem;
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .button-mobile {
+      display: block; } }
 
 .cta {
   grid-column: full-start / full-end;
@@ -166,7 +170,7 @@ body {
       background-color: var(--color-primary-dark); }
       @media only screen and (max-width: 768px) {
         .features-card__icon {
-          left: 42%; } }
+          left: 40%; } }
     .features-card:nth-child(2) {
       margin-top: 5rem; }
     .features-card:nth-child(3) {
@@ -282,7 +286,12 @@ body {
       border-radius: 1rem;
       padding: 3rem 0;
       z-index: 20;
-      display: none; } }
+      transition: all 0.2s;
+      opacity: 0;
+      visibility: hidden; } }
+  .navigation__is-visible {
+    opacity: 1;
+    visibility: visible; }
   .navigation-logo {
     margin-right: 4rem; }
     @media only screen and (max-width: 768px) {
@@ -360,8 +369,30 @@ body {
       background-color: var(--color-light);
       margin-top: 1.5rem;
       border-radius: 1rem; }
+      @media only screen and (max-width: 768px) {
+        .shorten-link__item {
+          align-items: start;
+          flex-direction: column; } }
+      @media only screen and (max-width: 768px) {
+        .shorten-link__item p {
+          margin-bottom: 2rem;
+          padding-bottom: 2rem;
+          width: 100%;
+          border-bottom: 1px solid var(--color-dark); } }
     .shorten-link__copy-item a {
       color: var(--color-primary); }
+      @media only screen and (max-width: 768px) {
+        .shorten-link__copy-item a {
+          display: block;
+          margin-bottom: 1.5rem; } }
+    @media only screen and (max-width: 768px) {
+      .shorten-link__copy-item {
+        flex-direction: column;
+        width: 100%; } }
     .shorten-link__copy-button {
       margin-left: 1.5rem;
       font-size: 1.8rem; }
+      @media only screen and (max-width: 768px) {
+        .shorten-link__copy-button {
+          margin: 0;
+          width: 100%; } }
