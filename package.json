@@ -11,12 +11,14 @@
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "dev:start": "parcel src/index.html"
+    "dev:start": "parcel src/index.html",
+    "bundle": "parcel build src/index.html"
   },
   "author": "Aitch",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "clipboard": "^2.0.4",
     "validator": "^12.2.0"
   },
   "devDependencies": {

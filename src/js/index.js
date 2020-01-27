@@ -1,35 +1,11 @@
 import axios from "axios";
 import validator from 'validator';
+import ClipboardJS from 'clipboard';
+import Links from './models/Links';
 import { elements } from './views/base';
 
+// Global state of app 
 const state = {};
-
-class Links {
-    constructor() {
-        this.links = [];
-    }
-
-    addLink(id, url) {
-        const link = {id, url};
-        this.links.push(link);
-
-        // Persist data in localStorage
-        this.persistData();
-        return link;
-    }
-
-    persistData() {
-        localStorage.setItem('links', JSON.stringify(this.links));
-    }
-
-    readStorage() {
-        const storage = JSON.parse(localStorage.getItem('links'));
-
-        // Restore links from localStorage
-        if (storage) this.links = storage;
-    }
-}
-
 
 // Shortening Form
 function renderLink(link) {
@@ -37,8 +13,8 @@ function renderLink(link) {
     <div class="shorten-link__item">
         <p>${link.url}</p>
         <div class="shorten-link__copy-item">
-            <a href="https://rel.ink/${link.id}"><span class="clipboard-copy" data-link-id="${link.id}">https://rel.ink/${link.id}</span></a>
-            <button class="shorten-link__copy-button button button--rounded">Copy</button>
+            <a href="https://rel.ink/${link.id}"><span class="clipboard-copy" id="${link.id}">https://rel.ink/${link.id}</span></a>
+            <button class="shorten-link__copy-button button button--rounded" data-clipboard-text="https://rel.ink/${link.id}">Copy</button>
         </div>
     </div>
     `
@@ -67,6 +43,7 @@ function sendRequest() {
         //console.log(state.searchData);
         const newLink = state.links.addLink(linkId, linkUrl);
         renderLink(newLink);
+        elements.searchInput.value = "";
     }).catch(() => {
         alert("Failed, but atleast this function works right?")
     })
@@ -94,3 +71,5 @@ function toggleMenu() {
 }
 
 elements.menuButton.addEventListener("click", () => toggleMenu());
+
+new ClipboardJS('.shorten-link__copy-button');
