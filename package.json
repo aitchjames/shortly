@@ -12,7 +12,7 @@
     "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "dev:start": "parcel src/index.html",
-    "bundle": "parcel build src/index.html"
+    "bundle": "parcel build src/index.html --no-source-maps"
   },
   "author": "Aitch",
   "license": "ISC",
