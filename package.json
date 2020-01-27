@@ -16,7 +16,8 @@
   "author": "Aitch",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2"    
+    "axios": "^0.19.2",
+    "validator": "^12.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",

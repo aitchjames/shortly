@@ -90,6 +90,10 @@
                 margin: 0;
                 width: 100%;
             }
+            
+            &-copied {
+                background-color: var(--color-primary-dark);
+            }
         }
     }
 }

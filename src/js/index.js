@@ -1,15 +1,6 @@
 import axios from "axios";
-
-// Document Elements
-const elements = {
-    menuButton: document.querySelector('.button-mobile'),
-    menuIcon: document.querySelector('.fa-bars'),
-    menuContent: document.querySelector('.navigation'),
-    searchForm: document.querySelector('.shorten-form'),
-    searchInput: document.querySelector(".shorten-form__input"),
-    linkRes: document.querySelector(".shorten-link"),
-    linkResList: document.querySelector(".shorten-link__item")
-}
+import validator from 'validator';
+import { elements } from './views/base';
 
 const state = {};
 
@@ -41,24 +32,57 @@ class Links {
 
 
 // Shortening Form
-function formHandler() {
+function renderLink(link) {
+    const markup = `
+    <div class="shorten-link__item">
+        <p>${link.url}</p>
+        <div class="shorten-link__copy-item">
+            <a href="https://rel.ink/${link.id}"><span class="clipboard-copy" data-link-id="${link.id}">https://rel.ink/${link.id}</span></a>
+            <button class="shorten-link__copy-button button button--rounded">Copy</button>
+        </div>
+    </div>
+    `
+    elements.linkRes.insertAdjacentHTML('beforeend', markup);
+}
 
+function formHandler() {
+    if (!state.links) {
+        state.links = new Links();
+    }
+
+    if (elements.searchInput.value != "" & validator.isURL(elements.searchInput.value)) {
+        sendRequest();
+        
+    } else {
+        renderError();
+    }
 }
 
 function sendRequest() {
     axios.post('https://rel.ink/api/links/', { url: elements.searchInput.value }).then(response => {
-        //console.log(response.data);
-        state.searchData = response.data
-        console.log(state.searchData);
-        //const newLink = state.links.addLink(id, url);
+        
+        let linkId = response.data.hashid;
+        let linkUrl = response.data.url
+
+        //console.log(state.searchData);
+        const newLink = state.links.addLink(linkId, linkUrl);
+        renderLink(newLink);
     }).catch(() => {
         alert("Failed, but atleast this function works right?")
     })
 }
 
+window.addEventListener('load', () => {
+    state.links = new Links();
+
+    state.links.readStorage();
+
+    state.links.links.forEach(link => renderLink(link));
+})
+
 elements.searchForm.addEventListener('submit', event => {
     event.preventDefault();
-    sendRequest();
+    formHandler();
 });
 
 // Navigation Menu
