@@ -19,7 +19,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "clipboard": "^2.0.4",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
